@@ -12,9 +12,9 @@ fixing some things to make original game better:
 - no annoying right click
 - you can now reload page on ` button (its that button with ~ on it usually?) please suggest other button if this is bad
 - somehow some silly images are now loaded instead of classic chess figures
+- use "=" button to change figures set
 
 open problems:
  - does not work in firefox, please use chrome
  
- ideas:
- - since now some silly chess figures are loaded, i want to somehow get classic chess figures back
+
