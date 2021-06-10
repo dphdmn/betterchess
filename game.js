@@ -1,15 +1,5 @@
 setTimeout(function() {
-    console.log("Version 2.3 JS loaded - no right click / reload on `");
-    document.addEventListener
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    document.addEventListener('keyup', (e) => {
-        console.log(e.code)
-  if (e.code === "Backquote"){location.reload();}
-});
-    //var x0 = 500;
-    console.log(document.cookie);
-    var exdays = 1000;
-
+    console.log("Version 2.4 JS loaded - changable figure set `");
     function setCookie(cname, cvalue) {
         localStorage.setItem(cname,cvalue)
     }
@@ -18,6 +8,25 @@ setTimeout(function() {
         
         return localStorage.getItem(cname)
     }
+    var keyORnot, ColorSet, Animation, AnOn = 0;
+    
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keyup', (e) => {
+        console.log(e.code)
+  if (e.code === "Backquote"){location.reload();}
+  if (e.code === "Equal"){ 
+    if (getCookie("color") == "1"){
+        setCookie("color", "0")
+    }else{
+        setCookie("color", "1")}
+    location.reload();
+  }
+});
+    //var x0 = 500;
+    console.log(document.cookie);
+    var exdays = 1000;
+
+    
     var input = document.getElementById("slider");
     
     var sqsizeD = window.innerHeight * 0.064;;
@@ -37,7 +46,7 @@ setTimeout(function() {
         var y1 = w;
     }
     var AnCo, KeyCO, ColCo, AnCoD, KeyCOD, ColCoD;
-    var keyORnot, ColorSet, Animation, AnOn = 0;
+    
     AnCo = getCookie("Ani");
     if (AnCo != "") {
         Animation = parseInt(AnCo, 10);
@@ -50,9 +59,10 @@ setTimeout(function() {
     } else {
         keyORnot = 0;
     }
-    ColCo = getCookie("ColC");
-    if (ColCo != "") {
-        ColorSet = parseInt(ColCo, 10);
+    
+    ColCo = getCookie("color");
+    if (ColCo == "1") {
+        ColorSet = 1;
     } else {
         ColorSet = 0;
     }
