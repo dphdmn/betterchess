@@ -1001,14 +1001,13 @@ image.src = "data:image/png;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmL
                         drawScore();
                     } else if (MDSxF != Bx || MDSyF != By) {
                         // console.log("wrong start");
-                        tryAgaincounter += 1
-                        indicator = 2;
+                        indicator = 2; tryAgaincounter += 1
                         drawScore();
                     } else {
                         for (var i = 0; i < ArrX.length; i++) {
                             if (MUSxF == ArrX[i] && MUSyF == ArrY[i]) {
-                                indicator = 3;
-                                wrongCounter += 1
+                                indicator = 3; wrongCounter += 1
+                                
                                 drawScore();
                                 // console.log("wrong move");
                                 ShowPiece();
@@ -1017,7 +1016,7 @@ image.src = "data:image/png;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmL
                             }
                         }
                         if (notWmove == 0) {
-                            indicator = 2;
+                            indicator = 2; tryAgaincounter += 1
                             tryAgaincounter += 1
                             drawScore();
                             //console.log("wrong movement");
@@ -1133,13 +1132,13 @@ image.src = "data:image/png;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmL
                 if (Keyb1 == 1) {
                     indicator = 5;
                 } else {
-                    indicator = 2;
+                    indicator = 2; tryAgaincounter += 1
                 }
                 drawScore();
             } else {
                 for (var i = 0; i < ArrX.length; i++) {
                     if (horiz0 == ArrX[i] && vertic0 == ArrY[i]) {
-                        indicator = 3;
+                        indicator = 3; wrongCounter += 1
                         drawScore();
                         //  console.log("wrong move");
                         ShowPiece();
@@ -1151,7 +1150,7 @@ image.src = "data:image/png;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmL
                     if (Keyb1 == 1) {
                         indicator = 5;
                     } else {
-                        indicator = 2;
+                        indicator = 2; tryAgaincounter += 1
                     }
                     drawScore();
                     //  console.log("wrong movement");
