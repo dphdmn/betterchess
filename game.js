@@ -1,6 +1,6 @@
 setTimeout(function() {
     //var x0 = 500;
-    console.log(document.cookie);
+    console.log("Version 2.1 JS loaded");
     var exdays = 1000;
 
     function setCookie(cname, cvalue) {
