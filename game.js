@@ -4,26 +4,12 @@ setTimeout(function() {
     var exdays = 1000;
 
     function setCookie(cname, cvalue) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/ultratraining";
+        localStorage.setItem(cname,cvalue)
     }
 
     function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return decodeURIComponent(c.substring(name.length, c.length));
-            }
-        }
-        return "";
+        
+        return localStorage.getItem(cname)
     }
     var input = document.getElementById("slider");
     
