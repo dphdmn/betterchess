@@ -1,7 +1,8 @@
 # betterchess
 ultratraining ultrabullet lichess moving pieces fast
 _________________________________
-fork by dph
+fork by dph:
+
 fixing some things to make original game better:
 
 - scores show now in format: Score ("try again" / "wrong")
