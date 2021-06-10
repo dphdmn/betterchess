@@ -1,6 +1,13 @@
 setTimeout(function() {
+    console.log("Version 2.3 JS loaded - no right click / reload on `");
+    document.addEventListener
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keyup', (e) => {
+        console.log(e.code)
+  if (e.code === "Backquote"){location.reload();}
+});
     //var x0 = 500;
-    console.log("Version 2.1 JS loaded");
+    console.log(document.cookie);
     var exdays = 1000;
 
     function setCookie(cname, cvalue) {
